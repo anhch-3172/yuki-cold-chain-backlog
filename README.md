@@ -15,7 +15,7 @@
 | GitHub Project | https://github.com/users/anhch-3172/projects/1 |
 | Báo cáo HTML của skill (trong repo) | [`swp-report/swp-report.html`](swp-report/swp-report.html) |
 | Báo cáo HTML (xem trực tiếp qua GitHub Pages) | https://anhch-3172.github.io/yuki-cold-chain-backlog/swp-report/swp-report.html |
-| Đã mở thử bằng cửa sổ ẩn danh | {{INCOGNITO_CHECK}} |
+| Đã mở thử bằng cửa sổ ẩn danh | Đã kiểm ngày 2026-11-06 bằng cửa sổ ẩn danh: repo, Project và báo cáo HTML mở được không cần đăng nhập. |
 
 ## Cấu trúc repo
 | File / thư mục | Nội dung |
