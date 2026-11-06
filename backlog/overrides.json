@@ -1,0 +1,6 @@
+{
+ "E6-2a": {"swp": 5, "reason": "Ca biên: nghỉ cộng dồn từ nhiều đoạn ngắn, tuyến qua nửa đêm; spec LAB-4 từng sai đúng chỗ này (4h30 vs 6,5h)"},
+ "E6-2d": {"swp": 5, "reason": "Bình quân 2 ngày / 2 tuần cần dữ liệu nhiều tuyến; ranh giới tuần chưa rõ; skill chỉ đếm 2 bảng"},
+ "E4-2d": {"swp": 5, "reason": "Phải loại bản ghi đảo (source=reversal), chỉ lấy lần giao đã nhận, xử lý dữ liệu migration không có lot_id"},
+ "E2-2": {"swp": 5, "reason": "4 endpoint cùng khuôn CRUD đã có trong prototype; nghiệp vụ chỉ hiển thị rule, không tính toán — skill đếm trùng"}
+}

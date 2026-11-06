@@ -1,0 +1,54 @@
+id,epic,parent,title,S,C,swp_skill,swp_final,hours
+E1-1,E1,E1,"Đăng nhập + chặn trang/API khi chưa đăng nhập (trang → /login, API → 401)",2,1,2,2,4
+E1-2,E1,E1,Phân quyền 8 vai trò: requireRole ở API + menu theo vai trò,2,2,3,3,7
+E1-3,E1,E1,Audit log append-only + hàm writeAudit dùng chung,1,2,2,2,4
+E1-4,E1,E1,Màn Audit log: lọc theo người / hành động / ngày (SC-47),2,1,2,2,4
+E1-5,E1,E1,Màn Người dùng & vai trò (SC-46),2,1,2,2,4
+E1-6,E1,E1,"Trang chủ theo vai trò: việc cần làm, cảnh báo đang mở (SC-02)",3,1,3,3,7
+E1-7,E1,E1,"Xử lý lỗi chung: thông điệp M_xx, lỗi DB (M_30), MockBadge",1,1,1,1,2
+E2-1,E2,E2,"SKU: xem/sửa dải nhiệt, loại hạn 賞味/消費期限, lane truy xuất, warn_days (SC-03)",2,2,3,3,7
+E2-2,E2,E2,"Khách hàng & hợp đồng KH-SKU: rule 1/3, 1/2, LABEL_DATE_ONLY, chưa chốt (SC-04)",3,3,8,5,12
+E2-3,E2,E2,Chính sách ngưỡng nhiệt có version (temp_policies) + duyệt version,2,3,5,5,12
+E3-1a,E3,E3-1,"Rule kiểm nhập: lane gạo / bò 10 số / nội bộ + nhiệt theo version → cách ly (lib + test T1, T5, T9)",1,4,5,5,12
+E3-1b,E3,E3-1,"API RCV-2: ghi phiếu, sinh lô available/quarantine + deviation, idempotent",3,2,5,5,12
+E3-1c,E3,E3-1,UI tablet nhập dòng hàng + validation B-1…B-9,2,3,5,5,12
+E3-1d,E3,E3-1,Gap LAB-4: hiển thị dải nhiệt + cảnh báo “sẽ cách ly” trước xác nhận; nhãn hạn theo 賞味/消費期限,1,3,3,3,7
+E3-1e,E3,E3-1,Gap LAB-4: API GET /api/receipts (RCV-1 chưa có) + danh sách phiếu gần đây (C-3),2,1,2,2,4
+E3-2,E3,E3,"Tồn kho & chi tiết lô: lọc, lịch sử trạng thái (SC-19)",3,1,3,3,7
+E3-3,E3,E3,Release / scrap lô bởi QA: máy trạng thái + maker-checker,2,3,5,5,12
+E4-1,E4,E4,Đơn hàng: danh sách / tạo / chi tiết (SC-22),3,1,3,3,7
+E4-2a,E4,E4-2,Bước ①: 消費期限 ≤ ngày giao chặn tuyệt đối; 賞味期限 gần hạn chỉ cảnh báo,1,3,3,3,7
+E4-2b,E4,E4-2,"Bước ②③: lệch dải nhiệt, lô không available",1,1,1,1,2
+E4-2c,E4,E4-2,"Bước ④: cửa sổ giao theo hợp đồng (1/3, 1/2, LABEL_DATE_ONLY); NULL / không hợp đồng → business_review",1,4,5,5,12
+E4-2d,E4,E4-2,Bước ⑤: cấm đảo ngày so với lần giao ĐÃ NHẬN gần nhất của cùng khách + SKU,1,3,3,5,12
+E4-2e,E4,E4-2,"Bước ⑥ FEFO / FIFO + bộ test R-06 (T2, T3, T3b, T7, T8)",1,1,1,1,2
+E4-3,E4,E4,"API preview / commit + RPC allocate_lot (khóa dòng, đồng thời)",3,2,5,5,12
+E4-4,E4,E4,"Gap LAB-4: allocation_runs.result thêm expiryDate, deadline, suggestedQty; sửa câu lý do đảo ngày",1,2,2,2,4
+E4-5,E4,E4,"UI SC-24: bảng ứng viên, cột hạn + mốc giao, banner đảo ngày, SL mặc định, business_review",2,3,5,5,12
+E4-6,E4,E4,"Lịch sử giao KH-SKU (SC-25) + làm rõ POST /api/delivery-history (bản ghi đảo, quyền)",2,2,3,3,7
+E5-1,E5,E5,Shipment theo dải nhiệt (ADR-009) + kiểm xe cùng dải ở SHP-2 / SHP-3,3,2,5,5,12
+E5-2a,E5,E5-2,"API kiểm trước xuất + xuất xe: ngưỡng theo dải, blocked → deviation",2,4,8,8,20
+E5-2b,E5,E5-2,"UI SC-27: form nhiệt xe / hàng, seal, kết quả, nút xuất xe",2,1,2,2,4
+E5-3a,E5,E5-3,"API POD: bằng chứng theo 車上渡し / 軒先渡し, shipment → delivered, ghi delivery_history từng lô",2,4,8,8,20
+E5-3b,E5,E5-3,"UI POD: form theo điều kiện giao, chỉ mở khi shipment đã xuất xe",1,2,2,2,4
+E5-4,E5,E5,"Sửa POD tạo version mới (supersedes_id), không ghi đè",1,2,2,2,4
+E6-1,E6,E6,Bộ quy tắc giờ lái có version (driver_rule_sets) + màn xem / duyệt version,2,3,5,5,12
+E6-2a,E6,E6-2,Lái liên tục ≤ 4h: chỉ đoạn nghỉ (cộng dồn ≥ 30 phút) mới reset; xếp / giao hàng không tính nghỉ,1,3,3,5,12
+E6-2b,E6,E6-2,"拘束時間 trong ngày: cảnh báo > 13h, chặn > 15h",1,2,2,2,4
+E6-2c,E6,E6-2,Nghỉ giữa ca ≥ 9h (so với tuyến hôm trước của tài xế),1,2,2,2,4
+E6-2d,E6,E6-2,Lái trong ngày ≤ 9h (bình quân 2 ngày) và 44h/tuần (bình quân 2 tuần),1,3,3,5,12
+E6-2e,E6,E6-2,"Giờ tích lũy tháng / năm (284h, 3.300h, tăng ca 960h) từ dữ liệu chấm công — hiện mock",2,4,8,8,20
+E6-3,E6,E6,"UI timeline SC-32: highlight đúng khoảng vi phạm, Lưu & kiểm giờ lái (PUT /api/routes/[id])",3,3,8,8,20
+E6-4,E6,E6,"Publish tuyến: kiểm lại ở server, gắn rule_version, sửa sau publish tăng version + lý do",1,4,5,5,12
+E6-5,E6,E6,Làm rõ với khách: xác minh pháp lý 改善基準告示 và ngoại lệ (OPS-LAW-01),1,2,2,2,4
+E7-1a,E7,E7-1,"API import: parse CSV, SHA-256 chống trùng, từ chối dòng lỗi kèm số dòng",2,4,8,8,20
+E7-1b,E7,E7-1,UI import + lịch sử file đã import (TMP-4),1,1,1,1,2
+E7-2,E7,E7,Gộp chuỗi vượt ngưỡng → cảnh báo (ngưỡng theo version tại read_at) + cách ly lô theo zone,2,4,8,8,20
+E7-3,E7,E7,"Hàng đợi cảnh báo SC-36: SLA 15 phút, review, bảng ngưỡng (gap)",3,2,5,5,12
+E7-4,E7,E7,"Deviation case SC-37: QA quyết định release / scrap, rationale, maker-checker",3,3,8,8,20
+E8-1,E8,E8,"Truy xuất xuôi / ngược theo mã bò, xuất xứ gạo, lô, NCC (SC-40)",3,3,8,8,20
+E8-2,E8,E8,"Recall & đối soát 2 đẳng thức, chặn đóng khi lệch (SC-41)",4,2,8,8,20
+E9-1,E9,E9,Migration chính thức cho shipments.band + xác nhận nguồn rls_auto_enable,1,2,2,2,4
+E9-2,E9,E9,Test E2E luồng lõi: nhập → phân bổ → xuất → POD (Playwright),2,2,3,3,7
+E9-3,E9,E9,"CI trên Pull Request: lint, unit test, build",1,1,1,1,2
+E9-4,E9,E9,Làm rõ đặc tả ERP (Q-04) + giữ interface nhập đơn CSV ổn định,2,2,3,3,7

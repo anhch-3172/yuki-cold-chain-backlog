@@ -1,0 +1,995 @@
+{
+ "epics": {
+  "E1": "Nền tảng & phân quyền",
+  "E2": "Master data",
+  "E3": "Nhập hàng & tồn kho",
+  "E4": "Đơn hàng & phân bổ (2 loại hạn, 1/3–1/2, đảo ngày)",
+  "E5": "Xuất hàng & POD",
+  "E6": "Lập tuyến & giờ lái xe tải 2024",
+  "E7": "Nhiệt độ & HACCP",
+  "E8": "Truy xuất & recall",
+  "E9": "Chất lượng, hạ tầng & tích hợp"
+ },
+ "parents": {
+  "E3-1": {
+   "epic": "E3",
+   "title": "SC-14 Kiểm hàng nhập (gồm gap LAB-4)"
+  },
+  "E4-2": {
+   "epic": "E4",
+   "title": "Engine phân bổ ①→⑥ (lib/rules/allocation)"
+  },
+  "E5-2": {
+   "epic": "E5",
+   "title": "SC-27 Kiểm trước xuất"
+  },
+  "E5-3": {
+   "epic": "E5",
+   "title": "SC-29 POD"
+  },
+  "E6-2": {
+   "epic": "E6",
+   "title": "Engine kiểm giờ lái 2024 (lib/rules/driverRules)"
+  },
+  "E7-1": {
+   "epic": "E7",
+   "title": "SC-35 Import CSV datalogger"
+  }
+ },
+ "items": [
+  {
+   "id": "E1-1",
+   "epic": "E1",
+   "parent": "E1",
+   "title": "Đăng nhập + chặn trang/API khi chưa đăng nhập (trang → /login, API → 401)",
+   "spec": "SC-01, CS-01",
+   "owner": "BE",
+   "f": {
+    "screens": 1,
+    "apis": 1,
+    "tables": 1,
+    "branches": 2,
+    "special": false,
+    "integrity": false,
+    "integration": false
+   },
+   "why": "1 màn, middleware, profiles; 2 nhánh trang/API"
+  },
+  {
+   "id": "E1-2",
+   "epic": "E1",
+   "parent": "E1",
+   "title": "Phân quyền 8 vai trò: requireRole ở API + menu theo vai trò",
+   "spec": "CS-02",
+   "owner": "BE",
+   "f": {
+    "screens": 1,
+    "apis": 2,
+    "tables": 1,
+    "branches": 3,
+    "special": false,
+    "integrity": false,
+    "integration": false
+   },
+   "why": "ME-1 + guard; ma trận quyền 8 role"
+  },
+  {
+   "id": "E1-3",
+   "epic": "E1",
+   "parent": "E1",
+   "title": "Audit log append-only + hàm writeAudit dùng chung",
+   "spec": "CS-03, ADR-004",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 0,
+    "tables": 1,
+    "branches": 1,
+    "special": false,
+    "integrity": true,
+    "integration": false
+   },
+   "why": "trigger chặn sửa/xóa"
+  },
+  {
+   "id": "E1-4",
+   "epic": "E1",
+   "parent": "E1",
+   "title": "Màn Audit log: lọc theo người / hành động / ngày (SC-47)",
+   "spec": "SC-47, AUD-1",
+   "owner": "FE",
+   "f": {
+    "screens": 1,
+    "apis": 1,
+    "tables": 1,
+    "branches": 1,
+    "special": false,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E1-5",
+   "epic": "E1",
+   "parent": "E1",
+   "title": "Màn Người dùng & vai trò (SC-46)",
+   "spec": "SC-46, USR-1",
+   "owner": "FE",
+   "f": {
+    "screens": 1,
+    "apis": 1,
+    "tables": 1,
+    "branches": 0,
+    "special": false,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E1-6",
+   "epic": "E1",
+   "parent": "E1",
+   "title": "Trang chủ theo vai trò: việc cần làm, cảnh báo đang mở (SC-02)",
+   "spec": "SC-02, DSB-1",
+   "owner": "FE",
+   "f": {
+    "screens": 1,
+    "apis": 1,
+    "tables": 4,
+    "branches": 2,
+    "special": false,
+    "integrity": false,
+    "integration": false
+   },
+   "why": "đếm từ 4 bảng"
+  },
+  {
+   "id": "E1-7",
+   "epic": "E1",
+   "parent": "E1",
+   "title": "Xử lý lỗi chung: thông điệp M_xx, lỗi DB (M_30), MockBadge",
+   "spec": "CS-09, CS-10",
+   "owner": "FE",
+   "f": {
+    "screens": 1,
+    "apis": 0,
+    "tables": 0,
+    "branches": 2,
+    "special": false,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E2-1",
+   "epic": "E2",
+   "parent": "E2",
+   "title": "SKU: xem/sửa dải nhiệt, loại hạn 賞味/消費期限, lane truy xuất, warn_days (SC-03)",
+   "spec": "SC-03, SKU-1/2",
+   "owner": "FE",
+   "f": {
+    "screens": 1,
+    "apis": 2,
+    "tables": 1,
+    "branches": 2,
+    "special": true,
+    "integrity": false,
+    "integration": false
+   },
+   "why": "loại hạn quyết định nhánh phân bổ"
+  },
+  {
+   "id": "E2-2",
+   "epic": "E2",
+   "parent": "E2",
+   "title": "Khách hàng & hợp đồng KH-SKU: rule 1/3, 1/2, LABEL_DATE_ONLY, chưa chốt (SC-04)",
+   "spec": "SC-04, CUS-1/2, AGR-1/2, ADR-007",
+   "owner": "FE",
+   "f": {
+    "screens": 1,
+    "apis": 4,
+    "tables": 2,
+    "branches": 3,
+    "special": true,
+    "integrity": false,
+    "integration": false
+   },
+   "why": "4 endpoint CRUD; NULL = chưa chốt"
+  },
+  {
+   "id": "E2-3",
+   "epic": "E2",
+   "parent": "E2",
+   "title": "Chính sách ngưỡng nhiệt có version (temp_policies) + duyệt version",
+   "spec": "ADR-005, CS-04",
+   "owner": "BE",
+   "f": {
+    "screens": 1,
+    "apis": 2,
+    "tables": 1,
+    "branches": 2,
+    "special": true,
+    "integrity": true,
+    "integration": false
+   },
+   "why": "ngưỡng Yuki tự công bố; maker-checker"
+  },
+  {
+   "id": "E3-1a",
+   "epic": "E3",
+   "parent": "E3-1",
+   "title": "Rule kiểm nhập: lane gạo / bò 10 số / nội bộ + nhiệt theo version → cách ly (lib + test T1, T5, T9)",
+   "spec": "SC-14, business-rules §3",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 0,
+    "tables": 1,
+    "branches": 5,
+    "special": true,
+    "integrity": false,
+    "integration": false
+   },
+   "why": "5 nhánh lane+nhiệt"
+  },
+  {
+   "id": "E3-1b",
+   "epic": "E3",
+   "parent": "E3-1",
+   "title": "API RCV-2: ghi phiếu, sinh lô available/quarantine + deviation, idempotent",
+   "spec": "SC-14, RCV-2",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 1,
+    "tables": 5,
+    "branches": 2,
+    "special": false,
+    "integrity": true,
+    "integration": false
+   },
+   "why": "5 bảng trong 1 giao dịch"
+  },
+  {
+   "id": "E3-1c",
+   "epic": "E3",
+   "parent": "E3-1",
+   "title": "UI tablet nhập dòng hàng + validation B-1…B-9",
+   "spec": "SC-14 View B",
+   "owner": "FE",
+   "f": {
+    "screens": 1,
+    "apis": 2,
+    "tables": 0,
+    "branches": 3,
+    "special": true,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E3-1d",
+   "epic": "E3",
+   "parent": "E3-1",
+   "title": "Gap LAB-4: hiển thị dải nhiệt + cảnh báo “sẽ cách ly” trước xác nhận; nhãn hạn theo 賞味/消費期限",
+   "spec": "SC-14 Other Notes",
+   "owner": "FE",
+   "f": {
+    "screens": 1,
+    "apis": 0,
+    "tables": 0,
+    "branches": 3,
+    "special": true,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E3-1e",
+   "epic": "E3",
+   "parent": "E3-1",
+   "title": "Gap LAB-4: API GET /api/receipts (RCV-1 chưa có) + danh sách phiếu gần đây (C-3)",
+   "spec": "API_List RCV-1",
+   "owner": "BE",
+   "f": {
+    "screens": 1,
+    "apis": 1,
+    "tables": 2,
+    "branches": 0,
+    "special": false,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E3-2",
+   "epic": "E3",
+   "parent": "E3",
+   "title": "Tồn kho & chi tiết lô: lọc, lịch sử trạng thái (SC-19)",
+   "spec": "SC-19, LOT-1/2",
+   "owner": "FE",
+   "f": {
+    "screens": 2,
+    "apis": 2,
+    "tables": 2,
+    "branches": 1,
+    "special": false,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E3-3",
+   "epic": "E3",
+   "parent": "E3",
+   "title": "Release / scrap lô bởi QA: máy trạng thái + maker-checker",
+   "spec": "SC-19, LOT-3, CS-07, CS-08",
+   "owner": "BE",
+   "f": {
+    "screens": 1,
+    "apis": 1,
+    "tables": 2,
+    "branches": 3,
+    "special": false,
+    "integrity": true,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E4-1",
+   "epic": "E4",
+   "parent": "E4",
+   "title": "Đơn hàng: danh sách / tạo / chi tiết (SC-22)",
+   "spec": "SC-22, ORD-1/2/3",
+   "owner": "FE",
+   "f": {
+    "screens": 2,
+    "apis": 3,
+    "tables": 2,
+    "branches": 1,
+    "special": false,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E4-2a",
+   "epic": "E4",
+   "parent": "E4-2",
+   "title": "Bước ①: 消費期限 ≤ ngày giao chặn tuyệt đối; 賞味期限 gần hạn chỉ cảnh báo",
+   "spec": "SC-24, CS-05",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 0,
+    "tables": 1,
+    "branches": 3,
+    "special": true,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E4-2b",
+   "epic": "E4",
+   "parent": "E4-2",
+   "title": "Bước ②③: lệch dải nhiệt, lô không available",
+   "spec": "SC-24",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 0,
+    "tables": 1,
+    "branches": 2,
+    "special": false,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E4-2c",
+   "epic": "E4",
+   "parent": "E4-2",
+   "title": "Bước ④: cửa sổ giao theo hợp đồng (1/3, 1/2, LABEL_DATE_ONLY); NULL / không hợp đồng → business_review",
+   "spec": "SC-24, ADR-007",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 0,
+    "tables": 2,
+    "branches": 5,
+    "special": true,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E4-2d",
+   "epic": "E4",
+   "parent": "E4-2",
+   "title": "Bước ⑤: cấm đảo ngày so với lần giao ĐÃ NHẬN gần nhất của cùng khách + SKU",
+   "spec": "SC-24, BR-DATE-01",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 0,
+    "tables": 2,
+    "branches": 3,
+    "special": true,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E4-2e",
+   "epic": "E4",
+   "parent": "E4-2",
+   "title": "Bước ⑥ FEFO / FIFO + bộ test R-06 (T2, T3, T3b, T7, T8)",
+   "spec": "SC-24, business-rules §12",
+   "owner": "QA",
+   "f": {
+    "screens": 0,
+    "apis": 0,
+    "tables": 1,
+    "branches": 2,
+    "special": false,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E4-3",
+   "epic": "E4",
+   "parent": "E4",
+   "title": "API preview / commit + RPC allocate_lot (khóa dòng, đồng thời)",
+   "spec": "ALC-1/2, ADR-003",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 2,
+    "tables": 4,
+    "branches": 2,
+    "special": false,
+    "integrity": true,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E4-4",
+   "epic": "E4",
+   "parent": "E4",
+   "title": "Gap LAB-4: allocation_runs.result thêm expiryDate, deadline, suggestedQty; sửa câu lý do đảo ngày",
+   "spec": "db-diagram #13 #14",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 1,
+    "tables": 1,
+    "branches": 2,
+    "special": true,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E4-5",
+   "epic": "E4",
+   "parent": "E4",
+   "title": "UI SC-24: bảng ứng viên, cột hạn + mốc giao, banner đảo ngày, SL mặc định, business_review",
+   "spec": "SC-24 View C",
+   "owner": "FE",
+   "f": {
+    "screens": 1,
+    "apis": 2,
+    "tables": 0,
+    "branches": 4,
+    "special": true,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E4-6",
+   "epic": "E4",
+   "parent": "E4",
+   "title": "Lịch sử giao KH-SKU (SC-25) + làm rõ POST /api/delivery-history (bản ghi đảo, quyền)",
+   "spec": "SC-25, DLH-1/2",
+   "owner": "BE",
+   "f": {
+    "screens": 1,
+    "apis": 2,
+    "tables": 1,
+    "branches": 2,
+    "special": false,
+    "integrity": true,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E5-1",
+   "epic": "E5",
+   "parent": "E5",
+   "title": "Shipment theo dải nhiệt (ADR-009) + kiểm xe cùng dải ở SHP-2 / SHP-3",
+   "spec": "ADR-009, db-diagram #4",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 2,
+    "tables": 3,
+    "branches": 2,
+    "special": true,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E5-2a",
+   "epic": "E5",
+   "parent": "E5-2",
+   "title": "API kiểm trước xuất + xuất xe: ngưỡng theo dải, blocked → deviation",
+   "spec": "SC-27, SHP-3/4",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 2,
+    "tables": 2,
+    "branches": 3,
+    "special": true,
+    "integrity": true,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E5-2b",
+   "epic": "E5",
+   "parent": "E5-2",
+   "title": "UI SC-27: form nhiệt xe / hàng, seal, kết quả, nút xuất xe",
+   "spec": "SC-27 View",
+   "owner": "FE",
+   "f": {
+    "screens": 1,
+    "apis": 2,
+    "tables": 0,
+    "branches": 2,
+    "special": false,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E5-3a",
+   "epic": "E5",
+   "parent": "E5-3",
+   "title": "API POD: bằng chứng theo 車上渡し / 軒先渡し, shipment → delivered, ghi delivery_history từng lô",
+   "spec": "SC-29, SHP-5",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 1,
+    "tables": 3,
+    "branches": 3,
+    "special": true,
+    "integrity": true,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E5-3b",
+   "epic": "E5",
+   "parent": "E5-3",
+   "title": "UI POD: form theo điều kiện giao, chỉ mở khi shipment đã xuất xe",
+   "spec": "SC-29, AS-33",
+   "owner": "FE",
+   "f": {
+    "screens": 1,
+    "apis": 1,
+    "tables": 0,
+    "branches": 2,
+    "special": true,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E5-4",
+   "epic": "E5",
+   "parent": "E5",
+   "title": "Sửa POD tạo version mới (supersedes_id), không ghi đè",
+   "spec": "SC-29 Event",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 1,
+    "tables": 1,
+    "branches": 1,
+    "special": false,
+    "integrity": true,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E6-1",
+   "epic": "E6",
+   "parent": "E6",
+   "title": "Bộ quy tắc giờ lái có version (driver_rule_sets) + màn xem / duyệt version",
+   "spec": "ADR-005, AS-32",
+   "owner": "BE",
+   "f": {
+    "screens": 1,
+    "apis": 2,
+    "tables": 1,
+    "branches": 2,
+    "special": true,
+    "integrity": true,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E6-2a",
+   "epic": "E6",
+   "parent": "E6-2",
+   "title": "Lái liên tục ≤ 4h: chỉ đoạn nghỉ (cộng dồn ≥ 30 phút) mới reset; xếp / giao hàng không tính nghỉ",
+   "spec": "SC-32, AS-31",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 0,
+    "tables": 1,
+    "branches": 4,
+    "special": true,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E6-2b",
+   "epic": "E6",
+   "parent": "E6-2",
+   "title": "拘束時間 trong ngày: cảnh báo > 13h, chặn > 15h",
+   "spec": "SC-32, M_18, M_20",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 0,
+    "tables": 1,
+    "branches": 2,
+    "special": true,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E6-2c",
+   "epic": "E6",
+   "parent": "E6-2",
+   "title": "Nghỉ giữa ca ≥ 9h (so với tuyến hôm trước của tài xế)",
+   "spec": "SC-32, M_19",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 0,
+    "tables": 2,
+    "branches": 2,
+    "special": true,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E6-2d",
+   "epic": "E6",
+   "parent": "E6-2",
+   "title": "Lái trong ngày ≤ 9h (bình quân 2 ngày) và 44h/tuần (bình quân 2 tuần)",
+   "spec": "FR-SCH-02 tóm tắt, AS-32",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 0,
+    "tables": 2,
+    "branches": 4,
+    "special": true,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E6-2e",
+   "epic": "E6",
+   "parent": "E6-2",
+   "title": "Giờ tích lũy tháng / năm (284h, 3.300h, tăng ca 960h) từ dữ liệu chấm công — hiện mock",
+   "spec": "SC-32 A-3, Phase 2 B06",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 1,
+    "tables": 2,
+    "branches": 3,
+    "special": true,
+    "integrity": false,
+    "integration": true
+   },
+   "why": ""
+  },
+  {
+   "id": "E6-3",
+   "epic": "E6",
+   "parent": "E6",
+   "title": "UI timeline SC-32: highlight đúng khoảng vi phạm, Lưu & kiểm giờ lái (PUT /api/routes/[id])",
+   "spec": "SC-32, RTE-3/4",
+   "owner": "FE",
+   "f": {
+    "screens": 1,
+    "apis": 2,
+    "tables": 2,
+    "branches": 3,
+    "special": true,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E6-4",
+   "epic": "E6",
+   "parent": "E6",
+   "title": "Publish tuyến: kiểm lại ở server, gắn rule_version, sửa sau publish tăng version + lý do",
+   "spec": "SC-32, RTE-5",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 1,
+    "tables": 1,
+    "branches": 3,
+    "special": true,
+    "integrity": true,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E6-5",
+   "epic": "E6",
+   "parent": "E6",
+   "title": "Làm rõ với khách: xác minh pháp lý 改善基準告示 và ngoại lệ (OPS-LAW-01)",
+   "spec": "PREMISE AS-32",
+   "owner": "BrSE",
+   "f": {
+    "screens": 0,
+    "apis": 0,
+    "tables": 0,
+    "branches": 0,
+    "special": true,
+    "integrity": false,
+    "integration": true
+   },
+   "why": ""
+  },
+  {
+   "id": "E7-1a",
+   "epic": "E7",
+   "parent": "E7-1",
+   "title": "API import: parse CSV, SHA-256 chống trùng, từ chối dòng lỗi kèm số dòng",
+   "spec": "SC-35, TMP-1",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 1,
+    "tables": 2,
+    "branches": 3,
+    "special": false,
+    "integrity": true,
+    "integration": true
+   },
+   "why": ""
+  },
+  {
+   "id": "E7-1b",
+   "epic": "E7",
+   "parent": "E7-1",
+   "title": "UI import + lịch sử file đã import (TMP-4)",
+   "spec": "SC-35 A-4, TMP-4",
+   "owner": "FE",
+   "f": {
+    "screens": 1,
+    "apis": 1,
+    "tables": 0,
+    "branches": 1,
+    "special": false,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E7-2",
+   "epic": "E7",
+   "parent": "E7",
+   "title": "Gộp chuỗi vượt ngưỡng → cảnh báo (ngưỡng theo version tại read_at) + cách ly lô theo zone",
+   "spec": "SC-36, CS-04",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 0,
+    "tables": 4,
+    "branches": 4,
+    "special": true,
+    "integrity": true,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E7-3",
+   "epic": "E7",
+   "parent": "E7",
+   "title": "Hàng đợi cảnh báo SC-36: SLA 15 phút, review, bảng ngưỡng (gap)",
+   "spec": "SC-36, TMP-2/3",
+   "owner": "FE",
+   "f": {
+    "screens": 1,
+    "apis": 2,
+    "tables": 2,
+    "branches": 2,
+    "special": true,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E7-4",
+   "epic": "E7",
+   "parent": "E7",
+   "title": "Deviation case SC-37: QA quyết định release / scrap, rationale, maker-checker",
+   "spec": "SC-37, DEV-1/2",
+   "owner": "FE",
+   "f": {
+    "screens": 1,
+    "apis": 2,
+    "tables": 2,
+    "branches": 3,
+    "special": false,
+    "integrity": true,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E8-1",
+   "epic": "E8",
+   "parent": "E8",
+   "title": "Truy xuất xuôi / ngược theo mã bò, xuất xứ gạo, lô, NCC (SC-40)",
+   "spec": "SC-40, TRC-1",
+   "owner": "BE",
+   "f": {
+    "screens": 1,
+    "apis": 1,
+    "tables": 4,
+    "branches": 3,
+    "special": true,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E8-2",
+   "epic": "E8",
+   "parent": "E8",
+   "title": "Recall & đối soát 2 đẳng thức, chặn đóng khi lệch (SC-41)",
+   "spec": "SC-41, RCL-1…5",
+   "owner": "FE",
+   "f": {
+    "screens": 1,
+    "apis": 5,
+    "tables": 2,
+    "branches": 2,
+    "special": false,
+    "integrity": true,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E9-1",
+   "epic": "E9",
+   "parent": "E9",
+   "title": "Migration chính thức cho shipments.band + xác nhận nguồn rls_auto_enable",
+   "spec": "db-diagram #3 #10",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 0,
+    "tables": 1,
+    "branches": 1,
+    "special": false,
+    "integrity": true,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E9-2",
+   "epic": "E9",
+   "parent": "E9",
+   "title": "Test E2E luồng lõi: nhập → phân bổ → xuất → POD (Playwright)",
+   "spec": "traceability",
+   "owner": "QA",
+   "f": {
+    "screens": 4,
+    "apis": 0,
+    "tables": 0,
+    "branches": 3,
+    "special": false,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E9-3",
+   "epic": "E9",
+   "parent": "E9",
+   "title": "CI trên Pull Request: lint, unit test, build",
+   "spec": "ADR-002",
+   "owner": "BE",
+   "f": {
+    "screens": 0,
+    "apis": 0,
+    "tables": 0,
+    "branches": 1,
+    "special": false,
+    "integrity": false,
+    "integration": false
+   },
+   "why": ""
+  },
+  {
+   "id": "E9-4",
+   "epic": "E9",
+   "parent": "E9",
+   "title": "Làm rõ đặc tả ERP (Q-04) + giữ interface nhập đơn CSV ổn định",
+   "spec": "ADR-008, IF-ERP-01",
+   "owner": "BrSE",
+   "f": {
+    "screens": 0,
+    "apis": 1,
+    "tables": 2,
+    "branches": 2,
+    "special": false,
+    "integrity": false,
+    "integration": true
+   },
+   "why": ""
+  }
+ ]
+}
