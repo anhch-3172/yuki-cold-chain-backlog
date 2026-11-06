@@ -1,0 +1,480 @@
+{
+ "issues": {
+  "E1": {
+   "id": "I_kwDOVlRGf88AAAABdDPYOA",
+   "number": 1,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/1"
+  },
+  "E2": {
+   "id": "I_kwDOVlRGf88AAAABdDPbCg",
+   "number": 2,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/2"
+  },
+  "E3": {
+   "id": "I_kwDOVlRGf88AAAABdDPeaw",
+   "number": 3,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/3"
+  },
+  "E4": {
+   "id": "I_kwDOVlRGf88AAAABdDPh4w",
+   "number": 4,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/4"
+  },
+  "E5": {
+   "id": "I_kwDOVlRGf88AAAABdDPkfw",
+   "number": 5,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/5"
+  },
+  "E6": {
+   "id": "I_kwDOVlRGf88AAAABdDPngw",
+   "number": 6,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/6"
+  },
+  "E7": {
+   "id": "I_kwDOVlRGf88AAAABdDPqiA",
+   "number": 7,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/7"
+  },
+  "E8": {
+   "id": "I_kwDOVlRGf88AAAABdDPtjA",
+   "number": 8,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/8"
+  },
+  "E9": {
+   "id": "I_kwDOVlRGf88AAAABdDPwfA",
+   "number": 9,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/9"
+  },
+  "E3-1": {
+   "id": "I_kwDOVlRGf88AAAABdDPzbw",
+   "number": 10,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/10"
+  },
+  "E4-2": {
+   "id": "I_kwDOVlRGf88AAAABdDP1xA",
+   "number": 11,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/11"
+  },
+  "E5-2": {
+   "id": "I_kwDOVlRGf88AAAABdDP39g",
+   "number": 12,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/12"
+  },
+  "E5-3": {
+   "id": "I_kwDOVlRGf88AAAABdDP8AQ",
+   "number": 13,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/13"
+  },
+  "E6-2": {
+   "id": "I_kwDOVlRGf88AAAABdDP_fA",
+   "number": 14,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/14"
+  },
+  "E7-1": {
+   "id": "I_kwDOVlRGf88AAAABdDQB9g",
+   "number": 15,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/15"
+  },
+  "E1-1": {
+   "id": "I_kwDOVlRGf88AAAABdDQEEQ",
+   "number": 16,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/16"
+  },
+  "E1-2": {
+   "id": "I_kwDOVlRGf88AAAABdDQGsQ",
+   "number": 17,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/17"
+  },
+  "E1-3": {
+   "id": "I_kwDOVlRGf88AAAABdDQI0A",
+   "number": 18,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/18"
+  },
+  "E1-4": {
+   "id": "I_kwDOVlRGf88AAAABdDQLdQ",
+   "number": 19,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/19"
+  },
+  "E1-5": {
+   "id": "I_kwDOVlRGf88AAAABdDQN-Q",
+   "number": 20,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/20"
+  },
+  "E1-6": {
+   "id": "I_kwDOVlRGf88AAAABdDQQVw",
+   "number": 21,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/21"
+  },
+  "E1-7": {
+   "id": "I_kwDOVlRGf88AAAABdDQTBw",
+   "number": 22,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/22"
+  },
+  "E2-1": {
+   "id": "I_kwDOVlRGf88AAAABdDQWnA",
+   "number": 23,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/23"
+  },
+  "E2-2": {
+   "id": "I_kwDOVlRGf88AAAABdDQZ4w",
+   "number": 24,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/24"
+  },
+  "E2-3": {
+   "id": "I_kwDOVlRGf88AAAABdDQdRw",
+   "number": 25,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/25"
+  },
+  "E3-1a": {
+   "id": "I_kwDOVlRGf88AAAABdDQgdw",
+   "number": 26,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/26"
+  },
+  "E3-1b": {
+   "id": "I_kwDOVlRGf88AAAABdDQi7Q",
+   "number": 27,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/27"
+  },
+  "E3-1c": {
+   "id": "I_kwDOVlRGf88AAAABdDQl8Q",
+   "number": 28,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/28"
+  },
+  "E3-1d": {
+   "id": "I_kwDOVlRGf88AAAABdDQo9Q",
+   "number": 29,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/29"
+  },
+  "E3-1e": {
+   "id": "I_kwDOVlRGf88AAAABdDQsWg",
+   "number": 30,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/30"
+  },
+  "E3-2": {
+   "id": "I_kwDOVlRGf88AAAABdDQuwQ",
+   "number": 31,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/31"
+  },
+  "E3-3": {
+   "id": "I_kwDOVlRGf88AAAABdDQxFA",
+   "number": 32,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/32"
+  },
+  "E4-1": {
+   "id": "I_kwDOVlRGf88AAAABdDQzug",
+   "number": 33,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/33"
+  },
+  "E4-2a": {
+   "id": "I_kwDOVlRGf88AAAABdDQ23w",
+   "number": 34,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/34"
+  },
+  "E4-2b": {
+   "id": "I_kwDOVlRGf88AAAABdDQ52w",
+   "number": 35,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/35"
+  },
+  "E4-2c": {
+   "id": "I_kwDOVlRGf88AAAABdDQ88Q",
+   "number": 36,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/36"
+  },
+  "E4-2d": {
+   "id": "I_kwDOVlRGf88AAAABdDRCfg",
+   "number": 37,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/37"
+  },
+  "E4-2e": {
+   "id": "I_kwDOVlRGf88AAAABdDRFNg",
+   "number": 38,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/38"
+  },
+  "E4-3": {
+   "id": "I_kwDOVlRGf88AAAABdDRHiw",
+   "number": 39,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/39"
+  },
+  "E4-4": {
+   "id": "I_kwDOVlRGf88AAAABdDRKyw",
+   "number": 40,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/40"
+  },
+  "E4-5": {
+   "id": "I_kwDOVlRGf88AAAABdDROTw",
+   "number": 41,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/41"
+  },
+  "E4-6": {
+   "id": "I_kwDOVlRGf88AAAABdDRSEw",
+   "number": 42,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/42"
+  },
+  "E5-1": {
+   "id": "I_kwDOVlRGf88AAAABdDRVpw",
+   "number": 43,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/43"
+  },
+  "E5-2a": {
+   "id": "I_kwDOVlRGf88AAAABdDRY3w",
+   "number": 44,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/44"
+  },
+  "E5-2b": {
+   "id": "I_kwDOVlRGf88AAAABdDRc0w",
+   "number": 45,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/45"
+  },
+  "E5-3a": {
+   "id": "I_kwDOVlRGf88AAAABdDRf-Q",
+   "number": 46,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/46"
+  },
+  "E5-3b": {
+   "id": "I_kwDOVlRGf88AAAABdDRinw",
+   "number": 47,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/47"
+  },
+  "E5-4": {
+   "id": "I_kwDOVlRGf88AAAABdDRlMw",
+   "number": 48,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/48"
+  },
+  "E6-1": {
+   "id": "I_kwDOVlRGf88AAAABdDRoXQ",
+   "number": 49,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/49"
+  },
+  "E6-2a": {
+   "id": "I_kwDOVlRGf88AAAABdDRsEw",
+   "number": 50,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/50"
+  },
+  "E6-2b": {
+   "id": "I_kwDOVlRGf88AAAABdDRvhA",
+   "number": 51,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/51"
+  },
+  "E6-2c": {
+   "id": "I_kwDOVlRGf88AAAABdDRy1A",
+   "number": 52,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/52"
+  },
+  "E6-2d": {
+   "id": "I_kwDOVlRGf88AAAABdDR2BA",
+   "number": 53,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/53"
+  },
+  "E6-2e": {
+   "id": "I_kwDOVlRGf88AAAABdDR5mA",
+   "number": 54,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/54"
+  },
+  "E6-3": {
+   "id": "I_kwDOVlRGf88AAAABdDR8kg",
+   "number": 55,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/55"
+  },
+  "E6-4": {
+   "id": "I_kwDOVlRGf88AAAABdDR_hw",
+   "number": 56,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/56"
+  },
+  "E6-5": {
+   "id": "I_kwDOVlRGf88AAAABdDSCfg",
+   "number": 57,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/57"
+  },
+  "E7-1a": {
+   "id": "I_kwDOVlRGf88AAAABdDSEsg",
+   "number": 58,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/58"
+  },
+  "E7-1b": {
+   "id": "I_kwDOVlRGf88AAAABdDSHAQ",
+   "number": 59,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/59"
+  },
+  "E7-2": {
+   "id": "I_kwDOVlRGf88AAAABdDSKGg",
+   "number": 60,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/60"
+  },
+  "E7-3": {
+   "id": "I_kwDOVlRGf88AAAABdDSNvQ",
+   "number": 61,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/61"
+  },
+  "E7-4": {
+   "id": "I_kwDOVlRGf88AAAABdDSQQQ",
+   "number": 62,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/62"
+  },
+  "E8-1": {
+   "id": "I_kwDOVlRGf88AAAABdDSS5Q",
+   "number": 63,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/63"
+  },
+  "E8-2": {
+   "id": "I_kwDOVlRGf88AAAABdDSVsw",
+   "number": 64,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/64"
+  },
+  "E9-1": {
+   "id": "I_kwDOVlRGf88AAAABdDSX-A",
+   "number": 65,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/65"
+  },
+  "E9-2": {
+   "id": "I_kwDOVlRGf88AAAABdDSaew",
+   "number": 66,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/66"
+  },
+  "E9-3": {
+   "id": "I_kwDOVlRGf88AAAABdDSc0Q",
+   "number": 67,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/67"
+  },
+  "E9-4": {
+   "id": "I_kwDOVlRGf88AAAABdDSfwQ",
+   "number": 68,
+   "url": "https://github.com/anhch-3172/yuki-cold-chain-backlog/issues/68"
+  }
+ },
+ "links": [
+  "E3>E3-1",
+  "E4>E4-2",
+  "E5>E5-2",
+  "E5>E5-3",
+  "E6>E6-2",
+  "E7>E7-1",
+  "E1>E1-1",
+  "E1>E1-2",
+  "E1>E1-3",
+  "E1>E1-4",
+  "E1>E1-5",
+  "E1>E1-6",
+  "E1>E1-7",
+  "E2>E2-1",
+  "E2>E2-2",
+  "E2>E2-3",
+  "E3-1>E3-1a",
+  "E3-1>E3-1b",
+  "E3-1>E3-1c",
+  "E3-1>E3-1d",
+  "E3-1>E3-1e",
+  "E3>E3-2",
+  "E3>E3-3",
+  "E4>E4-1",
+  "E4-2>E4-2a",
+  "E4-2>E4-2b",
+  "E4-2>E4-2c",
+  "E4-2>E4-2d",
+  "E4-2>E4-2e",
+  "E4>E4-3",
+  "E4>E4-4",
+  "E4>E4-5",
+  "E4>E4-6",
+  "E5>E5-1",
+  "E5-2>E5-2a",
+  "E5-2>E5-2b",
+  "E5-3>E5-3a",
+  "E5-3>E5-3b",
+  "E5>E5-4",
+  "E6>E6-1",
+  "E6-2>E6-2a",
+  "E6-2>E6-2b",
+  "E6-2>E6-2c",
+  "E6-2>E6-2d",
+  "E6-2>E6-2e",
+  "E6>E6-3",
+  "E6>E6-4",
+  "E6>E6-5",
+  "E7-1>E7-1a",
+  "E7-1>E7-1b",
+  "E7>E7-2",
+  "E7>E7-3",
+  "E7>E7-4",
+  "E8>E8-1",
+  "E8>E8-2",
+  "E9>E9-1",
+  "E9>E9-2",
+  "E9>E9-3",
+  "E9>E9-4"
+ ],
+ "project": {
+  "number": 1,
+  "url": "https://github.com/users/anhch-3172/projects/1",
+  "id": "PVT_kwHOBvTg5M4BqfU-"
+ },
+ "items": {
+  "E1": "PVTI_lAHOBvTg5M4BqfU-zhGlo0c",
+  "E2": "PVTI_lAHOBvTg5M4BqfU-zhGlo30",
+  "E3": "PVTI_lAHOBvTg5M4BqfU-zhGlo7c",
+  "E4": "PVTI_lAHOBvTg5M4BqfU-zhGlo-w",
+  "E5": "PVTI_lAHOBvTg5M4BqfU-zhGlpBo",
+  "E6": "PVTI_lAHOBvTg5M4BqfU-zhGlpFw",
+  "E7": "PVTI_lAHOBvTg5M4BqfU-zhGlpJU",
+  "E8": "PVTI_lAHOBvTg5M4BqfU-zhGlpQQ",
+  "E9": "PVTI_lAHOBvTg5M4BqfU-zhGlpT8",
+  "E3-1": "PVTI_lAHOBvTg5M4BqfU-zhGlo90",
+  "E4-2": "PVTI_lAHOBvTg5M4BqfU-zhGlpAE",
+  "E5-2": "PVTI_lAHOBvTg5M4BqfU-zhGlpFU",
+  "E5-3": "PVTI_lAHOBvTg5M4BqfU-zhGlpF8",
+  "E6-2": "PVTI_lAHOBvTg5M4BqfU-zhGlpJM",
+  "E7-1": "PVTI_lAHOBvTg5M4BqfU-zhGlpLo",
+  "E1-1": "PVTI_lAHOBvTg5M4BqfU-zhGlo1g",
+  "E1-2": "PVTI_lAHOBvTg5M4BqfU-zhGlo2I",
+  "E1-3": "PVTI_lAHOBvTg5M4BqfU-zhGlo2Y",
+  "E1-4": "PVTI_lAHOBvTg5M4BqfU-zhGlo20",
+  "E1-5": "PVTI_lAHOBvTg5M4BqfU-zhGlo3k",
+  "E1-6": "PVTI_lAHOBvTg5M4BqfU-zhGlo4E",
+  "E1-7": "PVTI_lAHOBvTg5M4BqfU-zhGlo4g",
+  "E2-1": "PVTI_lAHOBvTg5M4BqfU-zhGlo5Y",
+  "E2-2": "PVTI_lAHOBvTg5M4BqfU-zhGlo6I",
+  "E2-3": "PVTI_lAHOBvTg5M4BqfU-zhGlo6k",
+  "E3-1a": "PVTI_lAHOBvTg5M4BqfU-zhGlpAY",
+  "E3-1b": "PVTI_lAHOBvTg5M4BqfU-zhGlpAs",
+  "E3-1c": "PVTI_lAHOBvTg5M4BqfU-zhGlpBQ",
+  "E3-1d": "PVTI_lAHOBvTg5M4BqfU-zhGlpB4",
+  "E3-1e": "PVTI_lAHOBvTg5M4BqfU-zhGlpCY",
+  "E3-2": "PVTI_lAHOBvTg5M4BqfU-zhGlo-g",
+  "E3-3": "PVTI_lAHOBvTg5M4BqfU-zhGlo_A",
+  "E4-1": "PVTI_lAHOBvTg5M4BqfU-zhGlpAg",
+  "E4-2a": "PVTI_lAHOBvTg5M4BqfU-zhGlpDE",
+  "E4-2b": "PVTI_lAHOBvTg5M4BqfU-zhGlpD0",
+  "E4-2c": "PVTI_lAHOBvTg5M4BqfU-zhGlpEY",
+  "E4-2d": "PVTI_lAHOBvTg5M4BqfU-zhGlpE0",
+  "E4-2e": "PVTI_lAHOBvTg5M4BqfU-zhGlpGM",
+  "E4-3": "PVTI_lAHOBvTg5M4BqfU-zhGlpA8",
+  "E4-4": "PVTI_lAHOBvTg5M4BqfU-zhGlpCM",
+  "E4-5": "PVTI_lAHOBvTg5M4BqfU-zhGlpCs",
+  "E4-6": "PVTI_lAHOBvTg5M4BqfU-zhGlpDo",
+  "E5-1": "PVTI_lAHOBvTg5M4BqfU-zhGlpGg",
+  "E5-2a": "PVTI_lAHOBvTg5M4BqfU-zhGlpII",
+  "E5-2b": "PVTI_lAHOBvTg5M4BqfU-zhGlpI4",
+  "E5-3a": "PVTI_lAHOBvTg5M4BqfU-zhGlpHw",
+  "E5-3b": "PVTI_lAHOBvTg5M4BqfU-zhGlpIo",
+  "E5-4": "PVTI_lAHOBvTg5M4BqfU-zhGlpHA",
+  "E6-1": "PVTI_lAHOBvTg5M4BqfU-zhGlpJk",
+  "E6-2a": "PVTI_lAHOBvTg5M4BqfU-zhGlpNA",
+  "E6-2b": "PVTI_lAHOBvTg5M4BqfU-zhGlpOA",
+  "E6-2c": "PVTI_lAHOBvTg5M4BqfU-zhGlpO4",
+  "E6-2d": "PVTI_lAHOBvTg5M4BqfU-zhGlpPk",
+  "E6-2e": "PVTI_lAHOBvTg5M4BqfU-zhGlpQk",
+  "E6-3": "PVTI_lAHOBvTg5M4BqfU-zhGlpKE",
+  "E6-4": "PVTI_lAHOBvTg5M4BqfU-zhGlpKk",
+  "E6-5": "PVTI_lAHOBvTg5M4BqfU-zhGlpLM",
+  "E7-1a": "PVTI_lAHOBvTg5M4BqfU-zhGlpPU",
+  "E7-1b": "PVTI_lAHOBvTg5M4BqfU-zhGlpPs",
+  "E7-2": "PVTI_lAHOBvTg5M4BqfU-zhGlpMc",
+  "E7-3": "PVTI_lAHOBvTg5M4BqfU-zhGlpNY",
+  "E7-4": "PVTI_lAHOBvTg5M4BqfU-zhGlpOk",
+  "E8-1": "PVTI_lAHOBvTg5M4BqfU-zhGlpSM",
+  "E8-2": "PVTI_lAHOBvTg5M4BqfU-zhGlpS4",
+  "E9-1": "PVTI_lAHOBvTg5M4BqfU-zhGlpWc",
+  "E9-2": "PVTI_lAHOBvTg5M4BqfU-zhGlpW8",
+  "E9-3": "PVTI_lAHOBvTg5M4BqfU-zhGlpXY",
+  "E9-4": "PVTI_lAHOBvTg5M4BqfU-zhGlpYA"
+ }
+}
